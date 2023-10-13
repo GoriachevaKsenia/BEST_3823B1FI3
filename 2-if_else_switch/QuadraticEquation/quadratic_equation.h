@@ -1,3 +1,5 @@
 int QuadraticEquation(double a, double b, double c){
-    return 0;
+    double x;
+    x = round(- b / a);
+    return x;
 }
