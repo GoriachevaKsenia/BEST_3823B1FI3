@@ -1,3 +1,5 @@
+#include <math.h>
+
 int QuadraticEquation(double a, double b, double c){
     double x;
     x = round(- b / a);
