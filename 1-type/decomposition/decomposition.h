@@ -11,7 +11,7 @@ int reverse(int number) {
 double decomposition(int number) {
     double a, b, c, d, h;
     a = (number / 1000) * 1000;
-    b = ((number % 1000) / 100) * 1000;
+    b = ((number % 1000) / 100) * 100;
     c = ((number % 100) / 10) * 10;
     d = number % 10;
     h = 4.0 / ( (1.0 / a) + (1.0 / b) + (1.0 / c) + (1.0 / d));

@@ -1,6 +1,6 @@
 #include<math.h>
 bool compare_double(double x, double y) {
-    if (ceil(x) == ceil(y))
+    if (x == y)
     return true; // Not implementation
     else
     return false;
