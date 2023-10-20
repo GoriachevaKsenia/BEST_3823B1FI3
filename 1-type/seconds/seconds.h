@@ -1,34 +1,69 @@
+#include<math.h>
 int get_years(int seconds) {
-    return 0; // Not implementation
+    int k, years;
+    k = seconds / 32140800;
+    years = 1970 + k;
+    return years; // Not implementation
 }
 
 int get_month(int seconds) {
-    return 0; // Not implementation
+    int years, month;
+    years = (seconds / 32140800) * 32140800;
+    month = (seconds - years) / 2678400;
+    return month; // Not implementation
 }
 
 int get_day(int seconds) {
-    return 0; // Not implementation
+    int years, month, day;
+    years = (seconds / 32140800) * 32140800;
+    month = ((seconds - years) / 2678400) * 2678400;
+    day = (seconds - years - month) / 86400;
+    return day; // Not implementation
 }
 
 int get_hours(int seconds) {
-    return 0; // Not implementation
+    int years, month, day, hours;
+    years = (seconds / 32140800) * 32140800;
+    month = ((seconds - years) / 2678400) * 2678400;
+    day = ((seconds - years - month) / 86400) * 86400;
+    hours = (seconds - years - month - day) / 3600;
+    return hours; // Not implementation
 }
 
 int get_minutes(int seconds) {
-    return 0; // Not implementation
+    int years, month, day, hours, minutes;
+    years = (seconds / 32140800) * 32140800;
+    month = ((seconds - years) / 2678400) * 2678400;
+    day = ((seconds - years - month) / 86400) * 86400;
+    hours = ((seconds - years - month - day) / 3600) * 3600;
+    minutes = (seconds - years - month - day - hours) / 60;
+    return minutes; // Not implementation
 }
 
 int get_seconds(int seconds) {
-    return 0; // Not implementation
+     int years, month, day, hours, minutes, second;
+    years = (seconds / 32140800) * 32140800;
+    month = ((seconds - years) / 2678400) * 2678400;
+    day = ((seconds - years - month) / 86400) * 86400;
+    hours = ((seconds - years - month - day) / 3600) * 3600;
+    minutes = ((seconds - years - month - day - hours) / 60) * 60;
+    second = seconds - years - month - day - hours - minutes;
+    return second; // Not implementation
 }
 
 
 int get_magical_value(int seconds) {
+    double value, value1, value2, value3;
     int year = get_years(seconds);
     int month = get_month(seconds);
     int day = get_day(seconds);
     int hours = get_hours(seconds);
     int minutes = get_minutes(seconds);
     int second = get_seconds(seconds);
-    return 0; // Not implementation
+    //(\frac{год + месяц}{1 + день + секунды})^2 + \frac{минуты + \frac{минуты}{1 + часы}}{1 + часы}
+    value1 = pow((((double)(year + month)/(double)(1 + day + second)) - floor((double)(year + month)/(double)(1 + day + second))), 2);
+    value2 = ((double)(minutes)/(double)(1 + hours))-floor((double)(minutes)/(double)(1 + hours));
+    value3 = ((double)(minutes + value2)/(double)(1 + hours))-floor((double)(minutes + value2)/(double)(1 + hours));
+    value = value1 + value3;
+    return value; // Not implementation
 }
