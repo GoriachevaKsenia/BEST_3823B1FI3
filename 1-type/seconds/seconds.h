@@ -65,5 +65,5 @@ int get_magical_value(int seconds) {
     value2 = ((minutes)/(1 + hours));
     value3 = ((minutes + value2)/(1 + hours));
     value = value1 + value3;
-    return value; // Not implementation
+    return value;  // Not implementation
 }
