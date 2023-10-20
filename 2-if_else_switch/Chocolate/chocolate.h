@@ -4,4 +4,4 @@ int chocolate(int n, int m, int k){
     return 1;
     else
     return 0;
-}
+} 

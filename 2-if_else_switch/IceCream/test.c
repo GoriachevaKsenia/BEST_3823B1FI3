@@ -14,4 +14,4 @@ void test_iceream() {
 TEST_LIST = {
     {"Iceream", test_iceream},
     {NULL, NULL}
-};
+}; 
