@@ -1,6 +1,6 @@
 #include<math.h>
 bool compare_double(double x, double y) {
-    if (x == y)
+    if ((fabs(x - y)) < 0.0000001)
     return true; // Not implementation
     else
     return false;

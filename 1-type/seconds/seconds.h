@@ -53,7 +53,7 @@ int get_seconds(int seconds) {
 
 
 int get_magical_value(int seconds) {
-    double value, value1, value2, value3;
+    int value, value1, value2, value3;
     int year = get_years(seconds);
     int month = get_month(seconds);
     int day = get_day(seconds);
@@ -61,9 +61,9 @@ int get_magical_value(int seconds) {
     int minutes = get_minutes(seconds);
     int second = get_seconds(seconds);
     //(\frac{год + месяц}{1 + день + секунды})^2 + \frac{минуты + \frac{минуты}{1 + часы}}{1 + часы}
-    value1 = pow((((double)(year + month)/(double)(1 + day + second)) - floor((double)(year + month)/(double)(1 + day + second))), 2);
-    value2 = ((double)(minutes)/(double)(1 + hours))-floor((double)(minutes)/(double)(1 + hours));
-    value3 = ((double)(minutes + value2)/(double)(1 + hours))-floor((double)(minutes + value2)/(double)(1 + hours));
+    value1 = pow(((year + month)/(1 + day + second)), 2);
+    value2 = ((minutes)/(1 + hours));
+    value3 = ((minutes + value2)/(1 + hours));
     value = value1 + value3;
     return value; // Not implementation
 }
