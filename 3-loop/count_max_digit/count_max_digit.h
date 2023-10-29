@@ -24,10 +24,4 @@ char count_max_digit(long long number){
         n1 /= 10;
     } 
     return k;
-}
- //TEST_ASSERT(count_max_digit(100000) == 1);
-    //TEST_ASSERT(count_max_digit(9999999) == 7);
-    //TEST_ASSERT(count_max_digit(123456790321) == 1);
-    //TEST_ASSERT(count_max_digit(-9859721) == 2);
-    //TEST_ASSERT(count_max_digit(11991191991) == 5);
-    //TEST_ASSERT(count_max_digit(911111111119) == 2);
+} 
