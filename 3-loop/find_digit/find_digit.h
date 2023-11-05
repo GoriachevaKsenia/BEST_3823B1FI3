@@ -1,14 +1,14 @@
 #include <math.h>
 
 char find_digit(double number, char digit){
-    long long num = round(number), n1,
+    /*long long num = round(number), n1,
     int n, n2, d, d1;
     int k = 0, k1 = 0;
     while (num > 0)
     {
         n = num % 10;
         if (n != digit){
-        num -= n * l;
+        num /= 10;
         k +=1;
         }
         else d = digit;
@@ -25,7 +25,6 @@ char find_digit(double number, char digit){
         k1 +=1;
         }
         else d1 = digit;
-        }
-    return k1;
-    }
+        }*/
+    return 100;
 }  

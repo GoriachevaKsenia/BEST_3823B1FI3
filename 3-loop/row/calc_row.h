@@ -9,4 +9,3 @@ long long calc_row(int n, long long k){
     }
     return c;
 }
-//1*K+2*K+3*K+…+N*K
