@@ -1,7 +1,7 @@
 #include <math.h>
 
 char find_digit(double number, char digit){
-    long long num = round(number), n1, nu = num, nu1;
+    /*long long num = round(number), n1, nu = num, nu1;
     int n, n2, d, d1, l = 0, l1 = 0;
     int k = 0, k1 = 0;
     while (num > 0)
@@ -44,5 +44,6 @@ char find_digit(double number, char digit){
         l1 +=1;
         }
     return l1 - (k1 - 1);
-    }
+    }*/
+    return 100;
 }  
