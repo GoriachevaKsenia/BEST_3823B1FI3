@@ -1,48 +1,45 @@
 #include <math.h>
 
 char find_digit(double number, char digit){
-    long long num = round(number), n1, nu = num, nu1;
-    int n, n2, d, d1, l = 0, l1 = 0;
-    int k = 0, k1 = 0;
-    while (num > 0)
-    {
-        n = num % 10;
-        if (n != digit){
-        num /= 10;
-        k +=1;
+    long long i = 1000000000000000;
+    int k = 0;
+    long long m = floor(number), n1 = number;
+    if ((number > m) & (number < (number + 1))){
+        long long n = number * 1000000000;
+        if(n % 10 == 0){
+            n /= 10;
         }
-        else {
-        d = digit;
-        break;
+        while ((n / i) == 0){
+            i /= 10;
+        }
+        while(n > 0){
+            if((n / i) != digit){
+                 n = n - (n / i) * i;
+                 i /= 10;
+                 k +=1;
+            }
+            else {
+                return k + 2;
+            }
+        if (n == 0)
+        return -1;
         }
     }
-    while (nu > 0)
-    {
-        nu /= 10;
-        l +=1;
-    }
-    if (d == digit)
-    return l - (k -1);
     else{
-        n1 = number * 10000000000;
-        nu1 = n1;
-        while (n1 > 0)
-        {
-        n2 = n1 % 10;
-        if (n2 != digit){
-        n1 /= 10;
-        k1 +=1;
+        while ((n1 / i) == 0){
+            i /= 10;
         }
-        else {
-            d1 = digit;
-            break;
-        }
-        }
-        while (nu1 > 0)
-        {
-        nu1 /= 10;
-        l1 +=1;
-        }
-    return l1 - (k1 - 1);
+        while(n1 > 0){
+            if((n1 / i) != digit){
+                 n1 = n1 - (n1 / i) * i;
+                 i /= 10;
+                 k +=1;
+            }
+            else {
+                return k + 1;
+            }
+        if (n1 == 0)
+        return -1;
+        } 
     }
 }  

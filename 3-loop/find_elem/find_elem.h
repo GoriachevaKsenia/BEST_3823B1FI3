@@ -7,7 +7,7 @@ int find_elem(int left, int right, int number, int max_iter){
     {
         middle = (left + right) / 2;
         if (number < middle){
-        right = middle - 1;
+        right = middle - 1; // чтобы уменьшить количество шагов поиска можно сразу смещать границы поиска на элемент, следующий за серединой отрезка
         i+=1;
         }
         else if (number > middle){
