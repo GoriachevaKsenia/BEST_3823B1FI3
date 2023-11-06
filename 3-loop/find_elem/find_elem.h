@@ -2,7 +2,29 @@
 
 int find_elem(int left, int right, int number, int max_iter){
     int i = 0; //Счётчик итераций
-    
-
-    return i; //НЕ МЕНЯТЬ!
+    int m = 0, middle = 0, left1 = left;
+    while (left <= right)
+    {
+        middle = (left + right) / 2;
+        if (number < middle){
+        right = middle - 1;
+        i+=1;
+        }
+        else if (number > middle){
+        left = middle + 1;
+        i+=1;
+        }
+        else{
+            if(left1 > 0){
+            m = middle - left1;
+            i+=1;
+            }
+            else{
+            m= middle;
+            i+=1;
+            }
+            i= m * i;
+            return i; //НЕ МЕНЯТЬ!
+        }
+    }
 }
