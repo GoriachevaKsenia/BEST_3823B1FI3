@@ -11,6 +11,6 @@ char robot_move(int xs[], int ys[], int num_points, int area_radius, int xt, int
                 return 1;
             }
         }
-    return 0;
+        return 0;
     }
 }
