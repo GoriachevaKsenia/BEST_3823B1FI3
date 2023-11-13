@@ -7,4 +7,4 @@ unsigned int little_big_convert(unsigned int input){
     a3 = (input & 16711680) / 256;
     a4 = (input & 4278190080) / pow(2, 24);
     return a1 + a2 + a3 + a4;
-}
+} 
