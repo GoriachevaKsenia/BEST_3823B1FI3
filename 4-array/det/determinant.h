@@ -26,7 +26,7 @@ int determinant(int matrix[], int size){
         int m7 = (matrix[5] * matrix[21] - matrix[6] * matrix[20]) * (matrix[2] * matrix[13] * matrix[19] + matrix[4] * matrix[12] * matrix[18] + matrix[3] * matrix[14] * matrix[17] - matrix[4] * matrix[13] * matrix[17] - matrix[3] * matrix[12] * matrix[19] - matrix[2] * matrix[14] * matrix[18]);
         int m8 = (matrix[10] * matrix[16] - matrix[11] * matrix[15]) * (matrix[2] * matrix[8] * matrix[24] + matrix[4] * matrix[7] * matrix[23] + matrix[3] * matrix[9] * matrix[22] - matrix[4] * matrix[8] * matrix[22] - matrix[3] * matrix[7] * matrix[24] - matrix[2] * matrix[9] * matrix[23]);
         int m9 = (matrix[10] * matrix[21] - matrix[11] * matrix[20]) * (matrix[2] * matrix[8] * matrix[19] + matrix[4] * matrix[7] * matrix[18] + matrix[3] * matrix[9] * matrix[17] - matrix[4] * matrix[8] * matrix[17] - matrix[3] * matrix[7] * matrix[19] - matrix[2] * matrix[9] * matrix[18]);
-        int m10 = (matrix[15] * matrix[21] - matrix[116] * matrix[20]) * (matrix[2] * matrix[8] * matrix[14] + matrix[4] * matrix[7] * matrix[13] + matrix[3] * matrix[9] * matrix[12] - matrix[4] * matrix[8] * matrix[12] - matrix[3] * matrix[7] * matrix[14] - matrix[2] * matrix[9] * matrix[13]);
+        int m10 = (matrix[15] * matrix[21] - matrix[16] * matrix[20]) * (matrix[2] * matrix[8] * matrix[14] + matrix[4] * matrix[7] * matrix[13] + matrix[3] * matrix[9] * matrix[12] - matrix[4] * matrix[8] * matrix[12] - matrix[3] * matrix[7] * matrix[14] - matrix[2] * matrix[9] * matrix[13]);
         return m1 - m2 + m3 - m4 + m5 - m6 + m7 + m8 - m9 + m10;
     }
 }
