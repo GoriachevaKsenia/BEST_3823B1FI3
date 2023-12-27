@@ -1,6 +1,7 @@
 #include <math.h>
 #include <string.h>
+#include<stdlib.h>
 
 double convert(char num[]){
-    return 0.0;
+    return strtod(num, &num);
 }

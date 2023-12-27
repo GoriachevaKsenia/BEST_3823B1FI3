@@ -1,5 +1,5 @@
 #include <math.h>
-#include <stddef.h>
+#include <stdio.h>
 
 int* find_even(int* arr, int size){
     int k = 0;
