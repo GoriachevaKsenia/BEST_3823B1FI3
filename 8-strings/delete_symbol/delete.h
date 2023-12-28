@@ -1,7 +1,7 @@
 #include <math.h>
 #include <string.h>
 
-void DelSymbol1(char *str, char sym){
+void DelSymbol1(char* str, char sym){
     char* p1 = str, * p2 = str;
     while(*p1){
         if(*p1 == sym){
@@ -12,4 +12,4 @@ void DelSymbol1(char *str, char sym){
         }
     }
     *p2 = "\0";
-}
+} 

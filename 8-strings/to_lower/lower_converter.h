@@ -9,4 +9,4 @@ void lower(char* str){
             str[i] +=32;
         }
     }
-}
+} 
