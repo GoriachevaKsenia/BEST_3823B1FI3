@@ -1,7 +1,7 @@
 #include <math.h>
 
 void transform(double* array, int size, int* comands, int comands_count){
-    /*for(int i = 0; i < comands_count; i++){
+    for(int i = 0; i < comands_count; i++){
         switch(comands[i]){
             case 1:
             for(int j = 0; j < size; j++){
@@ -10,7 +10,7 @@ void transform(double* array, int size, int* comands, int comands_count){
             break;
             case 2:
             for(int j = 0; j < size; j++){
-                array[j] =sqrt(abs(array[j]));
+                array[j] = sqrt(array[j]);
             }
             break;
             case 3:
@@ -23,7 +23,7 @@ void transform(double* array, int size, int* comands, int comands_count){
             }
             sr_arifm /= size;
             for(int j = 0; j < size; j++){
-                array[j] = pow(abs(array[j]), sr_arifm);
+                array[j] = pow(array[j], sr_arifm);
             }
             break;
             case 4:
@@ -43,11 +43,11 @@ void transform(double* array, int size, int* comands, int comands_count){
             case 6:
             int t, n = 0, k = 0, l = 0;
             for(int j = 0; j < size; j++){
-                if(array[i] > 0)
+                if(array[j] > 0)
                 n++;
-                if(array[i] < 0)
+                if(array[j] < 0)
                 k++;
-                if(array[i] == 0)
+                if(array[j] == 0)
                 l++;
             }
             if (n == k + l)
@@ -57,8 +57,8 @@ void transform(double* array, int size, int* comands, int comands_count){
                     t = ((k + l) - n) / 2;
                     for(int j = 0; j < size; j++){
                         if(t != 0){
-                            if(array[i] < 0){
-                                array[i] *= (-1);
+                            if(array[j] < 0){
+                                array[j] *= (-1);
                                 t--;
                             }
                         }
@@ -67,21 +67,19 @@ void transform(double* array, int size, int* comands, int comands_count){
                 }
                 else{
                     t = (n - (k + l))/2;
-                    for(int j = 0; j < size; j++){
+                     for(int j = 0; j < size; j++){
                         if(t != 0){
-                            if(array[i] > 0){
-                                array[i] *= (-1);
+                            if(array[j] > 0){
+                                array[j] *= (-1);
                                 t--;
                             }
                         }
                     }
                 break; 
                 }
-
             }
             default:
             break;
         }
-    }*/
-    return;
+    }
 }

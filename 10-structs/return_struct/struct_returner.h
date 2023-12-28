@@ -15,4 +15,4 @@ typedef struct
 
 void* get_struct(int int_val, double double_val, char* pointerval){
     return NULL;
-}
+} 
