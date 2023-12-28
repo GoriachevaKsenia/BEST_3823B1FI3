@@ -22,4 +22,5 @@ char* convert(double number){
         count ++;
         number/= 10;
     }*/
+    return NULL;
 }

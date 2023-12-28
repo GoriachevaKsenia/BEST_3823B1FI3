@@ -16,19 +16,22 @@ void transform(double* array, int size, int* comands, int comands_count){
             case 3:
             double sr_arifm = 0;
             for(int j = 0; j < size; j++){
+                if(array[j] < 0)
+                sr_arifm -= array[j];
+                else
                 sr_arifm += array[j];
             }
             sr_arifm /= size;
             for(int j = 0; j < size; j++){
-                sr_arifm = pow(abs(array[j]), sr_arifm);
+                array[j] = pow(abs(array[j]), sr_arifm);
             }
             break;
             case 4:
             for(int j = 0; j < size; j++){
-                if(j % 2 == 0)
-                array[j] = -(int)array[j];
+                if((int)array[j] % 2 == 0)
+                array[j] = (int)array[j] * (-1);
                 else
-                array[j] = pow((int)array[j], -1);
+                array[j] = 0;
             }
             break;
             case 5:
@@ -38,16 +41,47 @@ void transform(double* array, int size, int* comands, int comands_count){
             }
             break;
             case 6:
+            int t, n = 0, k = 0, l = 0;
             for(int j = 0; j < size; j++){
-                if(j % 2 == 0)
-                array[j] = abs(array[j]);
-                else
-                array[j] = -abs(array[j]);
+                if(array[i] > 0)
+                n++;
+                if(array[i] < 0)
+                k++;
+                if(array[i] == 0)
+                l++;
             }
+            if (n == k + l)
             break;
+            else{ 
+                if(n < k + l){
+                    t = ((k + l) - n) / 2;
+                    for(int j = 0; j < size; j++){
+                        if(t != 0){
+                            if(array[i] < 0){
+                                array[i] *= (-1);
+                                t--;
+                            }
+                        }
+                    }
+                break;
+                }
+                else{
+                    t = (n - (k + l))/2;
+                    for(int j = 0; j < size; j++){
+                        if(t != 0){
+                            if(array[i] > 0){
+                                array[i] *= (-1);
+                                t--;
+                            }
+                        }
+                    }
+                break; 
+                }
+
+            }
             default:
             break;
         }
     }*/
-    return
+    return;
 }
